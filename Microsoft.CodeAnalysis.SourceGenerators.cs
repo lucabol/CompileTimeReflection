@@ -1,5 +1,6 @@
 ﻿namespace Microsoft.CodeAnalysis.CSharp.SourceGenerators.CompileTime;
 
+// This is a fake API for compile time reflection. It uses normal reflection instead.
 public class CompileTimeAttribute: Attribute { }
 
 public static class CompileTimeReflection
@@ -25,6 +26,7 @@ public static class CompileTimeEmit
     public static CompileTimeClass EmitClass(string name) => new CompileTimeClass();
 }
 
+// This represents the code that is generated at runtime.
 public enum Token { Double, Plus1, NotFound, Bye }
 
 public static class VmExt
